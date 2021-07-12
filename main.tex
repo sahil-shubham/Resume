@@ -18,7 +18,10 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
 
@@ -41,11 +44,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -55,7 +58,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -69,12 +72,18 @@
   }
 }
 
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-1pt}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -86,18 +95,19 @@
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-1pt}
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -111,7 +121,8 @@
   \textbf{\Huge \scshape Sahil Shubham} \\ \vspace{1pt}
   \small \href{mailto:sahil.shubham2000@gmail.com}{\faEnvelope \, sahil.shubham2000@gmail.com} $|$ 
     \href{https://www.linkedin.com/in/sahil-shubham-3599731a1/}{\faLinkedin \, Sahil Shubham} $|$
-    \href{https://github.com/sahil-shubham}{\faGithub \, sahil-shubham}
+    \href{https://github.com/sahil-shubham}{\faGithub \, sahil-shubham} $|$
+    {\faPhone \, +91-9871646149}
 \end{center}
 
 
@@ -120,21 +131,10 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {Indian Institute of Technology}{Kharagpur, India}
-{B.Tech in Metallurgy \& Materials Engineering, SGPA -- 8.58/10.00} {2019 -- 2023}
+{B.Tech in Metallurgy \& Materials Engineering, CGPA -- 8.03/10.00} {2019 -- 2023}
 \resumeSubHeadingListEnd
 
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{Core Team Member}{November 2020 -- Present}
-{Kharagpur Open Source Society (KOSS) }{IIT Kharagpur}
-\resumeItemListStart
-\resumeItem{Conducted workshops for students regarding GSoC, Open-Source etc}
-\resumeItem{Developed the front-end of a web application using React, SCSS, Bulma for KWoC}
-\resumeItemListEnd
 
 % -----------Multiple Positions Heading-----------
 %    \resumeSubSubheading
@@ -146,60 +146,82 @@
 %    \resumeSubHeadingListEnd
 %-------------------------------------------
 
-\resumeSubheading
-{Organization Member}{September 2020 -- Present}
-{Metakgp}{IIT Kharagpur}
-\resumeItemListStart
-\resumeItem{Maintained and improved multiple projects aimed at students of IIT Kharagpur}
-\resumeItem{Assess and troubleshoot bugs brought by students}
-\resumeItem{Made projects accessible to a larger audience through improvements}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeProjectHeading
-{\textbf{Kharagpur Winter of Code (KWoC 2020)} $|$ \emph{React, Bulma, Sass, Netlify}}{November 2020 -- January 2021}
-{\textit{Making a website to see real time GitHub stats for thousand of students}}
-\resumeItemListStart
-\resumeItem{Developed a web application with React as the front-end, with Sass and Bulma}
-\resumeItem{Implemented GitHub APIs to get real time statistics for thousands of users}
-\resumeItem{Visualized GitHub data of more than 3000 students to show their collaborations}
-\resumeItem{Implemented continuous deployment using Netlify}
-\resumeItemListEnd
-\resumeProjectHeading
-{\textbf{E-Learning Platform} $|$ \emph{React, Material-UI, Node.js, AWS, MySQL}}{October 2020 -- Present}
-{\textit{Making a unified learning platform for students, parents and teachers}}
-\resumeItemListStart
-\resumeItem{Developed a full-stack web application using React \& Node.js}
-\resumeItem{Implemented multiple functionalities like online quiz, assignments, classes on the platform}
-\resumeItem{Implemented continuous deployment using AWS}
-\resumeItemListEnd
-% \resumeProjectHeading
-% {\textbf{CodeIT} $|$ \emph{Bootstrap, Node.js, AWS, MySQL}}{January 2021 -- Present}
-% {\textit{Making a placement platform for students pursuing different careers}}
+% \resumeSubheading
+% {Organization Member}{September 2020 -- Present}
+% {Metakgp}{IIT Kharagpur}
 % \resumeItemListStart
-% \resumeItem{Developed a full-stack web application using Bootstrap \& Node.js}
-% \resumeItem{Implemented multiple functionalities like online quiz, assignments, classes on the platform}
-% \resumeItem{Implemented continuous deployment using AWS}
+% \resumeItem{Maintained and improved multiple projects aimed at students of IIT Kharagpur}
+% \resumeItem{Assess and troubleshoot bugs brought by students}
 % \resumeItemListEnd
-\resumeSubHeadingListEnd
 
-
-% %-----------OPEN SOURCE PROJECTS-----------
-% \section{Open-Source Projects}
-% \resumeSubHeadingListStart
-% \resumeProjectHeading
-% {\textbf{\href{https://github.com/KGPyaar}{KGPyaar}} $|$ \emph{React,TypeScript, Flask, AWS, Netlify}}{January 2021 -- February 2021}
-% {\textit{Making a website to see real time GitHub stats for thousand of students}}
-% \resumeItemListStart
-% \resumeItem{Developed a full-stack web application using React \& Flask}
-% \resumeItemListEnd
 % \resumeSubHeadingListEnd
 
+
+%-----------OPEN SOURCE PROJECTS-----------
+\section{Open-Source Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\href{https://github.com/kgpyaar-tech?tab=repositories}{KGPyaar}} $|$ \emph{ReactJS, TypeScript, Sass, Flask, MongoDB}}{January 2021 -- February 2021}
+% {\textit{Made a client side encrypted dating website for the students of IIT Kharagpur}}
+\resumeItemListStart
+\resumeItem{Made a client side encrypted dating website for the students of IIT Kharagpur}
+\resumeItem{Made custom authentication Hooks to handle user's data, login and registration process}
+\resumeItem{Used SendGrid to verify college emails and to send link for the next step of registration}
+\resumeItem{Implemented ElGamal encryption in the frontend to preserve privacy of user's choices}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumeProjectHeading
+{\textbf{\href{https://github.com/InterEyeEyeTea2021/frontend}{Grameen-Setu}} $|$ \emph{ReactJS, Typescript, Sass, React Hook Form}}{March 2021}
+% {\textit{Made a progressive web-app for small local businesses to sell their products and connect with producers}}
+\resumeItemListStart
+\resumeItem{Made a progressive web-app for small local businesses to sell their products and connect with producers}
+\resumeItem{Implemented multi-step registration form using React Hook Form}
+% \resumeItem{Used YouTube API so show tutorial videos to help people make things on their own}
+\resumeItem{Worked in a team of 4 to develop the whole platform in 3 weeks and tested among real consumers and producers}
+\resumeItem{Won gold for best Tech-Led Innovation for Rural Entrepreneurs organized by Dhristee in InterIIT Tech Meet}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumeProjectHeading
+{\textbf{\href{https://github.com/tsg-iitkgp/tsg-site}{Technology Students' Gymkhana}} $|$ \emph{NextJS, Javascript, Sass}}{March 2021 - June 2021}
+% {\textit{Remade the \href{http://www.gymkhana.iitkgp.ac.in/index.php}{\underline{old gymkhana website}} using NextJS to show college achievements, events and contacts}}
+\resumeItemListStart
+\resumeItem{Remade the \href{http://www.gymkhana.iitkgp.ac.in/index.php}{\underline{old gymkhana website}} using NextJS to show college achievements, events and contacts}
+\resumeItem{Made multiple high fidelity designs from scratch using Figma}
+\resumeItem{Made responsive charts to show competition results using Nivo/bar}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumeProjectHeading
+{\textbf{\href{https://github.com/Neera-AI/project-ias}{Project IAS}} $|$ \emph{ReactJS, Sass, NodeJS, Meilisearch, InstantSearch}}{July 2021 -- Present}
+\resumeItemListStart
+\resumeItem{Made a single platform for IAS aspirants with previous year questions, daily news and reading material}
+\resumeItem{Used Algolia's InstantSearch with Meilisearch to index and search through hundreds of articles quickly}
+\resumeItem{Implemented a work around to achieve multi-index search, a feature that's not available in Meilisearch}
+\resumeItemListEnd
+\vspace{-13pt}
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/kossiitkgp/KWoC-21-Frontend}{Kharagpur Winter of Code (KWoC 2020)}} $|$ \emph{ReactJS, Bulma, Sass}}{November 2020 -- January 2021}
+% {\textit{Made a platform to register and contribute to open source projects with a dashboard for mentors and mentees}}
+\resumeItemListStart
+\resumeItem{Made a platform to register and contribute to open source projects with a dashboard for mentors and mentees}
+\resumeItem{Used GitHub API to show real time contribution for thousands of students and evaluated their contributions}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://neera.ai}{Neera.ai}}{May 2021 -- Present}
+      {\textbf{Full Stack Intern} $|$ \emph{ReactJS, Redux, Styled-Components, NodeJS, Meilisearch}}{}
+      \resumeItemListStart
+        \resumeItem{Interned as a Full Stack developer at Neera, a startup aiming to combine all searches into one personalized search}
+        \resumeItem{Developed multiple search integrations using NodeJS and MeiliSearch for services like Pocket, Notion and Drive}
+        \resumeItem{Integrated other Open Sources projects like Supertokens to implement Open-Authentication}
+        % \resumeItem{Also made a platform for UPSC students to search through previous year questions and study material}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
 
 
 %
@@ -207,25 +229,38 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: C/C++, Python, JavaScript, HTML/ CSS, SASS, SQL, Bash} \\
-        \textbf{Libraries/Frameworks}{: JQuery, TypeScript, ReactJS,  Material-UI, Bulma, Bootstrap, NodeJS, Tkinter} \\
-        \textbf{Developer tools}{: Git, Vim, Netlify, AWS, MongoDB, Postman} \\
+        \textbf{Programming Languages}{: C/C++, Python, JavaScript} \\
+        \textbf{Frontend Web Libraries/Frameworks}{: JQuery, TypeScript, ReactJS, NextJS, Redux, Material-UI, Bulma, Bootstrap, Styled-Components, TailwindCSS } \\
+        \textbf{Backend Web Libraries/Frameworks}{: NodeJS, Flask}\\
+        \textbf{Databases}{: MySQL, PostgreSQL, MongoDB}\\
+        \textbf{Systems/Platforms}{: Git, Linux, Nginx} \\
         }}
 \end{itemize}
 
 
-%-------------------------------------------
+%-----------Position of Responsibility-----------
+\section{Position of Responsibility}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+    {\textbf{\href{https://github.com/kgpyaar-tech}{Kharagpur Open Source Society}} $|$ \emph{Core Team Member}}{October 2020 -- Present}
+    \resumeItemListStart
+    \resumeItem{Helped conduct workshops regarding Git, Vim, Python and REST API to promote Open Source in IIT Kharagpur}
+    \resumeItem{Organized KWoC, a month long event for students to contribute to Open Source with 2500+ registrations}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-----------Activities \& Scholastic Achievements-----------
 \section{Activities \& Scholastic Achievements}
 \begin{itemize}[leftmargin=0.15in, label={}]
-\item \textbf{Open-Source Involvement}: Helped improve multiple projects like {\href{https://github.com/metakgp/erp-auto-login} {\underline{ERP Auto-Login}}}, {\href {https://github.com/metakgp/gyft-serve}{\underline{Gyft Serve}}} and {\href{https://github.com/lttkgp}{\underline{LTTKGP}}}. Also helped conduct KWoC, a month long event to promote open source culture among college students across India
+\item \textbf{Open-Source Involvement}: Helped improve multiple projects like {\href{https://github.com/metakgp/erp-auto-login} {\underline{ERP Auto-Login}}}, {\href {https://github.com/metakgp/gyft-serve}{\underline{Gyft Serve}}} and {\href{https://github.com/lttkgp}{\underline{LTTKGP}}}.
 
-\item\textbf{Mechanical Team Member, {\href{https://swarm-iitkgp.github.io/}{Swarm, IIT Kharagpur}}}: Made and improved designs for different types of path finding and modular bots
+% \item\textbf{Mechanical Team Member, {\href{https://swarm-iitkgp.github.io/}{Swarm, IIT Kharagpur}}}: Made and improved designs for different types of path finding and modular bots
 
-\item\textbf{IITJEE Advanced \emph{AIR 5295}:} Under top 3\% amongst more than 2,00,000 students 
+\item\textbf{IITJEE:} Under top 3\% and in the top 0.7\% for IITJEE Advanced and Main Exam
 
-\item\textbf{IITJEE Mains \emph{AIR 9306}:} In top 0.7\% amongst more than 12,00,000 students
+% \item\textbf{IITJEE Advanced \emph{AIR 5295}:} Under top 3\% amongst more than 2,00,000 students 
+
+% \item\textbf{IITJEE Mains \emph{AIR 9306}:} In top 0.7\% amongst more than 12,00,000 students
 
 \end{itemize}
 
