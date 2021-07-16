@@ -14,7 +14,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+% \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -23,6 +23,9 @@
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
+
+\usepackage{xcolor}
+\usepackage[colorlinks = true, linkcolor = red ,urlcolor  = red, citecolor = blue,a nchorcolor = blue]{hyperref}
 
 
 %----------FONT OPTIONS----------
@@ -164,18 +167,18 @@
 {\textbf{\href{https://github.com/kgpyaar-tech?tab=repositories}{KGPyaar}} $|$ \emph{ReactJS, TypeScript, Sass, Flask, MongoDB}}{January 2021 -- February 2021}
 % {\textit{Made a client side encrypted dating website for the students of IIT Kharagpur}}
 \resumeItemListStart
-\resumeItem{Made a client side encrypted dating website for the students of IIT Kharagpur}
+\resumeItem{Implemented ElGamal ecryption in the frontend to make a dating website for student of IIT Kharagpur}
 \resumeItem{Made custom authentication Hooks to handle user's data, login and registration process}
-\resumeItem{Used SendGrid to verify college emails and to send link for the next step of registration}
-\resumeItem{Implemented ElGamal encryption in the frontend to preserve privacy of user's choices}
+\resumeItem{Wrote detailed documentation to spread awareness resulting in more than 600+ registrations, and 90 matches in 2 weeks}
+% \resumeItem{Used SendGrid to verify college emails and to send link for the next step of registration}
 \resumeItemListEnd
 \vspace{-13pt}
 \resumeProjectHeading
 {\textbf{\href{https://github.com/InterEyeEyeTea2021/frontend}{Grameen-Setu}} $|$ \emph{ReactJS, Typescript, Sass, React Hook Form}}{March 2021}
 % {\textit{Made a progressive web-app for small local businesses to sell their products and connect with producers}}
 \resumeItemListStart
-\resumeItem{Made a progressive web-app for small local businesses to sell their products and connect with producers}
-\resumeItem{Implemented multi-step registration form using React Hook Form}
+\resumeItem{Made a progressive web-app for small local businesses to sell their products and connect with other producers}
+% \resumeItem{Implemented multi-step registration form using React Hook Form}
 % \resumeItem{Used YouTube API so show tutorial videos to help people make things on their own}
 \resumeItem{Worked in a team of 4 to develop the whole platform in 3 weeks and tested among real consumers and producers}
 \resumeItem{Won gold for best Tech-Led Innovation for Rural Entrepreneurs organized by Dhristee in InterIIT Tech Meet}
@@ -185,17 +188,17 @@
 {\textbf{\href{https://github.com/tsg-iitkgp/tsg-site}{Technology Students' Gymkhana}} $|$ \emph{NextJS, Javascript, Sass}}{March 2021 - June 2021}
 % {\textit{Remade the \href{http://www.gymkhana.iitkgp.ac.in/index.php}{\underline{old gymkhana website}} using NextJS to show college achievements, events and contacts}}
 \resumeItemListStart
-\resumeItem{Remade the \href{http://www.gymkhana.iitkgp.ac.in/index.php}{\underline{old gymkhana website}} using NextJS to show college achievements, events and contacts}
-\resumeItem{Made multiple high fidelity designs from scratch using Figma}
-\resumeItem{Made responsive charts to show competition results using Nivo/bar}
+\resumeItem{Remade the old gymkhana website using NextJS to show college achievements, events, contacts and conduct elections}
+\resumeItem{Made multiple high fidelity designs using Figma to give the website a fresh look resulting in 25k page views in 3 weeks}
+% \resumeItem{Made responsive charts to show competition results using Nivo/bar package}
 \resumeItemListEnd
 \vspace{-13pt}
 \resumeProjectHeading
 {\textbf{\href{https://github.com/Neera-AI/project-ias}{Project IAS}} $|$ \emph{ReactJS, Sass, NodeJS, Meilisearch, InstantSearch}}{July 2021 -- Present}
 \resumeItemListStart
 \resumeItem{Made a single platform for IAS aspirants with previous year questions, daily news and reading material}
-\resumeItem{Used Algolia's InstantSearch with Meilisearch to index and search through hundreds of articles quickly}
-\resumeItem{Implemented a work around to achieve multi-index search, a feature that's not available in Meilisearch}
+% \resumeItem{Used Algolia's InstantSearch with Meilisearch to index and search through hundreds of articles quickly}
+\resumeItem{Implemented a work around to achieve multi-index search, a feature currently unavailable in Meilisearch}
 \resumeItemListEnd
 \vspace{-13pt}
 
@@ -213,11 +216,12 @@
 
     \resumeSubheading
       {\href{https://neera.ai}{Neera.ai}}{May 2021 -- Present}
-      {\textbf{Full Stack Intern} $|$ \emph{ReactJS, Redux, Styled-Components, NodeJS, Meilisearch}}{}
+      {\textbf{Full Stack Intern} $|$ \emph{ReactJS, Redux, tailwindCSS, Styled-Components, NodeJS, Meilisearch, Supabase}}{}
       \resumeItemListStart
         \resumeItem{Interned as a Full Stack developer at Neera, a startup aiming to combine all searches into one personalized search}
-        \resumeItem{Developed multiple search integrations using NodeJS and MeiliSearch for services like Pocket, Notion and Drive}
-        \resumeItem{Integrated other Open Sources projects like Supertokens to implement Open-Authentication}
+        \resumeItem{Implemented Figma designs and gradually moved the whole codebase from tailwindCSS to styled-components}
+        \resumeItem{Worked in a team  of 3 to develop search integrations to allow users to search through their personal documents for services like Pocket, Notion and Drive}
+        % \resumeItem{Integrated other Open Sources projects like Supertokens to implement Open-Authentication and Supabase as Database}
         % \resumeItem{Also made a platform for UPSC students to search through previous year questions and study material}
       \resumeItemListEnd
       
@@ -252,7 +256,7 @@
 %-----------Activities \& Scholastic Achievements-----------
 \section{Activities \& Scholastic Achievements}
 \begin{itemize}[leftmargin=0.15in, label={}]
-\item \textbf{Open-Source Involvement}: Helped improve multiple projects like {\href{https://github.com/metakgp/erp-auto-login} {\underline{ERP Auto-Login}}}, {\href {https://github.com/metakgp/gyft-serve}{\underline{Gyft Serve}}} and {\href{https://github.com/lttkgp}{\underline{LTTKGP}}}.
+\item \textbf{Open-Source Involvement}: Helped improve multiple projects like {\href{https://github.com/metakgp/erp-auto-login} {ERP Auto-Login}}, {\href {https://github.com/metakgp/gyft-serve}{Gyft Serve}} and {\href{https://github.com/lttkgp}{LTTKGP}}
 
 % \item\textbf{Mechanical Team Member, {\href{https://swarm-iitkgp.github.io/}{Swarm, IIT Kharagpur}}}: Made and improved designs for different types of path finding and modular bots
 
