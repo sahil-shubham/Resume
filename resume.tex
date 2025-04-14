@@ -130,16 +130,27 @@
 \section{Work Experience}
   \resumeSubHeadingListStart
        \resumeSubheading
-      {\href{https://www.joinef.com/}{FinsynthAI}}{May 2024 -- Present}
-      {\textbf{Full Stack Engineer} $|$ {ReactJS, TypeScript, GraphQL, Terraform, Helm}}{}
+      {\href{https://www.finsynth.ai/}{FinsynthAI}}{June 2024 -- April 2025}
+      {\textbf{Full Stack Engineer} $|$ {ReactJS, GQL, NodeJS, Python, EKS, Terraform, Helm, Argo, AWS}}{}
       \resumeItemListStart
-        \resumeItem{Founding Engineer at Finsynth, built Excel co-pilot enabling analysts to leverage existing financial models}
-        \resumeItem{Architected multi-environment EKS infrastructure with Terraform and Helm, managing multiple microservices}
-        \resumeItem{Implemented Argo DAG workflows and parallel execution patterns, achieving 40\% reduction in model inference latency}
-        \resumeItem{Added cluster-wide logging using Fluent-bit, custom Lua parser and S3, enabling efficient querying with AWS Athena}
-        \resumeItem{Developed transaction-based IndexedDB persistence with request workers, ensuring reliable offline data processing}
-        % Model-IQ prompt optimization, token usage optimization, 
-        % \resumeItem{Led test-driven development initiatives, achieving 90\% coverage across plugin and infrastructure components}
+        % Original: Second Engineer at FinsynthAI, built a copilot aimed at accelerating long shot financial research into open US companies inside of their Financial Models in Excel. Goal was to reduce the time it takes for an analyst to get upto speed on different company metrics like guidance, outlook, market reaction and past performance. 
+        \resumeItem{Second Engineer at FinsynthAI, a startup aiming to accelerate long shot financial research workflows inside of Excel}
+        \resumeItem{Created production infrastructure from scratch, building frontend \& CI/CD while leading customer onboarding} 
+        \resumeItem{Engineered Excel Add-in with GraphQL, implementing fault-tolerant IndexedDB storage and data normalization}
+        % Original: Architected and managed EKS infrastructure using Terraform and Helm, supporting 10+ microservices via a umbrella chart structure and helm templates
+        \resumeItem{Architected \& managed autoscaled EKS for 10+ services, utilizing Helm templates and modular Terraform configs}
+        % Original: Developed secure deployment pipeline and release scripts across multiple namespaces through self hosted Netbird tunnel; implemented native multi-arch GitHub Actions runners, \textbf{reducing CI/CD build times by 90\%}
+        % \resumeItem{Implemented secure deployment pipelines \& multi-arch GitHub runners, \textbf{cutting CI/CD build times by 90\%}}
+        \resumeItem{Reduced infrastructure cost by 25\% by switching to arm64 docker images and native multi-architecture builds}
+        % Original: Deployed Argo Workflows for DAG workflows and setup GPU auto scaling groups within EKS, \textbf{achieving a 78\% reduction in ML model inference latency}}
+        \resumeItem{Introduced Argo for Bedrock Batch Inference DAGs with time sliced GPU, \textbf{achieving 78\% faster inference latency}}
+        % Original: Engineered cluster-wide observability with Fluent-bit, custom Lua parsing, and S3 storage, facilitating efficient large-scale log querying using AWS Athena
+        % \resumeItem{Engineered cluster-wide observability via Fluent Bit logging pipeline with custom Lua parsing using AWS Athena }
+        % Original (commented out in previous state): Improved LLM accuracy and recall by optimizing I/O formats and token usage; built Python data processing pipelines (Jupyter, openpyxl) for dataset creation from complex Excel metadata
+        % \resumeItem{Improved LLM accuracy/recall via optimized I/O; built Python data pipelines for complex Excel dataset creation}
+        % Original: Implemented horizontal scaling for a self-hosted Weaviate vector database cluster, creating custom scripts to automate data migration and address sharding limitations
+        % \resumeItem{Executed horizontal scaling for self-hosted Weaviate DB using custom automation scripts for data migration.}
+        
       \resumeItemListEnd
      \resumeSubheading
       {\href{https://www.joinef.com/}{Entrepreneur First}}{July 2023 -- January 2024}
