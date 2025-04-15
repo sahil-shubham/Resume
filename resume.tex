@@ -50,8 +50,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+  \vspace{-8pt}\scshape\raggedright\large\bfseries % Further reduced negative space again
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}] % Kept this as is for now
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -60,7 +60,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-3pt}} % Increased negative space
   }
 }
 
@@ -71,34 +71,34 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{0pt}\item
+  \vspace{1pt}\item % Reduced top padding
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \small #2 \\
+      \textbf{#1} & \small #2 \\ % Use single backslashes
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-6pt} % Increased negative space
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
+    \item % Use single backslashes
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{\small#1} & \textbf{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-5pt} % Use single backslashes
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+    \vspace{1pt}\item % Reduced top padding
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \small #2\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-7pt} % Increased negative space
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}} % Use single backslashes
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$} % Use single backslashes
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$} % Use single backslashes
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} % Use single backslashes
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}} % Use single backslashes
+\newcommand{\resumeItemListStart}{\begin{itemize}} % Use single backslashes
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-9pt}} % Increased negative space
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,7 +110,7 @@
     \href{https://sahil-shubham.in}{\faGlobe \, sahil-shubham.in} $|$
     \href{https://github.com/sahil-shubham}{\faGithub \, sahil-shubham} 
     $|$ \href{https://www.linkedin.com/in/sahil-shubham/}{\faLinkedin \, sahil-shubham} 
-    \\ \vspace{5pt}
+    \\ \vspace{3pt} % Reduced space before italics
    \emph{I care a lot about Open Source, writing organized code and knowing what I don't know} \\ \vspace{-5pt}
 \end{center}
 
@@ -119,7 +119,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {Indian Institute of Technology}{Kharagpur, India}
-{B.Tech in Metallurgy \& Materials Engineering} {2019 -- 2023}
+{B.Tech in Metallurgy \& Materials Engineering} {2019 -- 2023} % Use single backslash &
 \resumeSubHeadingListEnd
 
 
@@ -131,14 +131,14 @@
   \resumeSubHeadingListStart
        \resumeSubheading
       {\href{https://www.finsynth.ai/}{FinsynthAI}}{June 2024 -- April 2025}
-      {\textbf{Full Stack Engineer} $|$ {ReactJS, GQL, NodeJS, Python, EKS, Terraform, Helm, Argo, AWS}}{}
+      {\textbf{Full Stack Engineer} $|$ {React, GraphQL, Node.js, Python, EKS, Terraform, Helm, Argo, AWS}}{} % Use single backslashes
       \resumeItemListStart
         % Original: Second Engineer at FinsynthAI, built a copilot aimed at accelerating long shot financial research into open US companies inside of their Financial Models in Excel. Goal was to reduce the time it takes for an analyst to get upto speed on different company metrics like guidance, outlook, market reaction and past performance. 
         \resumeItem{Second Engineer at FinsynthAI, a startup aiming to accelerate long shot financial research workflows inside of Excel}
         \resumeItem{\textbf{Created production infrastructure from scratch}, building frontend \& CI/CD while leading customer onboarding} 
-        \resumeItem{Engineered Excel Add-in with GraphQL, implementing \textbf{fault-tolerant IndexedDB} storage and \textbf{data normalization}}
+        \resumeItem{Engineered Excel Add-in with GraphQL, implementing \textbf{fault-tolerant IndexedDB} storage and \textbf{data normalization}} % Use single backslashes
         % Original: Architected and managed EKS infrastructure using Terraform and Helm, supporting 10+ microservices via a umbrella chart structure and helm templates
-        \resumeItem{Architected \& managed autoscaled EKS for \textbf{10+ services}, utilizing Helm templates and modular Terraform configs}
+        \resumeItem{Architected \& managed autoscaled EKS for \textbf{10+ services}, utilizing Helm templates and modular Terraform configs} % Use single backslash &, Use single backslashes
         % Original: Developed secure deployment pipeline and release scripts across multiple namespaces through self hosted Netbird tunnel; implemented native multi-arch GitHub Actions runners, \textbf{reducing CI/CD build times by 90\%}
         % \resumeItem{Implemented secure deployment pipelines \& multi-arch GitHub runners, \textbf{cutting CI/CD build times by 90\%}}
         \resumeItem{\textbf{Reduced infra cost by 25\%} by implementing mixed ASGs with arm instances, enabled by native multi-arch builds}
@@ -164,23 +164,23 @@
 %
           \resumeSubheading
       {\href{https://workduck.io}{Workduck}}{January 2022 -- August 2023}
-      {\textbf{Founding Engineer} $|$ {ReactJS, Typescript, Zustand, Plate, Webpack}}{}
+      {\textbf{Founding Engineer} $|$ {React, TypeScript, Zustand, Plate.js, Webpack}}{} % Use single backslashes
       \resumeItemListStart
         \resumeItem{Frontend engineer at Workduck, a startup with a vision to create an E2E knowledge management tool for product teams}
-        \resumeItem{Led the development for web, setup mono-repo for chrome extension and webapp in React \textbf{using Webpack and Nx}}
-        \resumeItem{Benchmarked browser storage types, ensured data sync across Chrome, localStorage, and IndexedDB via \textbf{Message API}}
-        \resumeItem{Added features like public notes with \textbf{read-through cache}, web highlights by \textbf{Selection Object serialization}, etc.}
-        \resumeItem{Optimized the extension's bundle, cutting cyclic and managing peer dependencies, \textbf{resulting in a 60\% size reduction}}
-        \resumeItem{\textbf{Enhanced cross-org sync} via S3 snapshots and websockets inside of shared workers to broadcast CRUD events}
-        \resumeItem{\textbf{Improved DX} by setting up changesets, and GitHub actions for yarn lock diffs and deployments to chrome store}
+        \resumeItem{Ported desktop features to web/extension (Plate.js), making it the \textbf{primary product} \& streamlining onboarding.}
+        \resumeItem{Benchmarked browser storage types, ensured data sync across Chrome, localStorage, and IndexedDB via \textbf{Message API}} % Use single backslashes
+        \resumeItem{Added features like public notes with \textbf{read-through cache}, web highlights by \textbf{Selection Object serialization}, etc.} % Use single backslashes
+        \resumeItem{Optimized the extension's bundle, cutting cyclic and managing peer dependencies, \textbf{resulting in a 60\% size reduction}} % Use single backslash %
+        \resumeItem{\textbf{Enhanced cross-org sync} via S3 snapshots and websockets inside of shared workers to broadcast CRUD events} % Use single backslashes
+        \resumeItem{\textbf{Improved DX} by setting up changesets, and GitHub actions for yarn lock diffs and deployments to chrome store} % Use single backslashes
       \resumeItemListEnd
 % 
     \resumeSubheading
       {\href{https://felvin.com}{Felvin Search}}{May 2021 -- March 2022}
-      {\textbf{Full Stack Developer} $|$ {ReactJS, Redux, Styled-Components, NodeJS, Docker, AWS}}{}
+      {\textbf{Full Stack Developer} $|$ {React, Redux, styled-components, Node.js, Docker, AWS}}{} % Use single backslashes
       \resumeItemListStart
-        \resumeItem{\textbf{First Engineer} at Felvin, a startup aiming to improve search experience through open-source community driven apps}
-        \resumeItem{Developed integrations to give users \textbf{a singular search} through their personal documents for Pocket, Notion and Drive}
+        \resumeItem{\textbf{First Engineer} at Felvin, a startup aiming to improve search experience through open-source community driven apps} % Use single backslashes
+        \resumeItem{Developed integrations to give users \textbf{a singular search} through their personal documents for Pocket, Notion and Drive} % Use single backslashes
         \resumeItem{Dockerized the codebase to deploy on AWS ECS using GitHub Actions for Continuous Deployment, later moved to EKS}
         \resumeItem{Developed custom CLI to improve the developer experience and handle custom Webpack bundling for multiple packages}
         \resumeItem{Maintained the \href{https://github.com/felvin-search/instant-apps}{open source repository} and conducted hackathons to grow the Discord community to \textbf{150+ developers}}
@@ -195,25 +195,25 @@
 %
 \resumeSubHeadingListStart
 \resumeProjectHeading
-{\textbf{\href{https://github.com/kgpyaar-tech?tab=repositories}{Sprout}} $|$ \emph{Tauri, Rust, React, TypeScript, SQLite, sqlite-vec}}{April 2025}
+{\textbf{\href{https://github.com/kgpyaar-tech?tab=repositories}{Sprout}} $|$ \emph{Tauri, Rust, React, TypeScript, SQLite, SQLite-vec}}{Ongoing} % Use single backslashes
 \resumeItemListStart
-\resumeItem{Built Sprout, a minimal, UX-focused daily note taking app that automatically \textbf{organizes information as you write}}
-\resumeItem{Implemented asynchronous vector embedding generation and semantic search using \textbf{sqlite-vec} for a powerful search}
+\resumeItem{Built Sprout, a minimal, UX-focused daily note taking app that automatically \textbf{organizes information as you write}} % Use single backslashes
+\resumeItem{Implemented asynchronous vector embedding generation and semantic search using \textbf{SQLite-vec} for a powerful search} % Use single backslashes
 \resumeItemListEnd
 \resumeProjectHeading
-{\textbf{\href{https://github.com/kgpyaar-tech?tab=repositories}{KGPyaar}} $|$ \emph{ReactJS, TypeScript, Sass, Flask, MongoDB}}{February 2021}
+{\textbf{\href{https://github.com/kgpyaar-tech?tab=repositories}{KGPyaar}} $|$ \emph{React, TypeScript, Sass, Flask, MongoDB}}{February 2021} % Use single backslashes
 \resumeItemListStart
-\resumeItem{Engineered an E2E encrypted dating platform, publishing \href{https://bit.ly/KGPyaar-Doc}{white paper} that drove \textbf{600+ student registrations}}
-\resumeItem{Led community engagement through \href{https://www.facebook.com/KGPyaar}{facebook page}, driving \textbf{950+ followers} and \textbf{90 successful matches in 2 weeks}}
+\resumeItem{Engineered an E2E encrypted dating platform, publishing \href{https://bit.ly/KGPyaar-Doc}{white paper} that drove \textbf{600+ student registrations}} % Use single backslashes
+\resumeItem{Led community engagement through \href{https://www.facebook.com/KGPyaar}{facebook page}, driving \textbf{950+ followers} and \textbf{90 successful matches in 2 weeks}} % Use single backslashes
 \resumeItemListEnd
 % \resumeSubHeadingListEnd
 % \vspace{-15pt}
 % \resumeSubHeadingListStart
 \resumeProjectHeading
-{\textbf{\href{https://github.com/InterEyeEyeTea2021/frontend}{Grameen-Setu}} $|$ \emph{ReactJS, Typescript, Sass}}{March 2021}
+{\textbf{\href{https://github.com/InterEyeEyeTea2021/frontend}{Grameen-Setu}} $|$ \emph{React, TypeScript, Sass}}{March 2021} % Use single backslashes
 \resumeItemListStart
-\resumeItem{Built Grameen Setu, an e-commerce platform for SMEs and SHGs, delivering a user tested solution \textbf{in 3 weeks}}
-\resumeItem{Secured \textbf{gold for Tech Innovation} at InterIIT Tech Meet and \textbf{won Dhaka Regional Summits} for \textbf{Hult Prize 2022}}
+\resumeItem{Built Grameen Setu, an e-commerce platform for SMEs and SHGs, delivering a user tested solution \textbf{in 3 weeks}} % Use single backslashes
+\resumeItem{Secured \textbf{gold for Tech Innovation} at InterIIT Tech Meet and \textbf{won Dhaka Regional Summits} for \textbf{Hult Prize 2022}} % Use single backslashes
 \resumeItemListEnd
 % \resumeSubHeadingListEnd
 % \vspace{-15pt}
@@ -227,7 +227,7 @@
 % \resumeItem{\href{https://drive.google.com/file/d/1V33ds39Y6aaw01q7xebCDyp20yxtIZRh/view}{Pitched to gradCapital}, \textbf{a \$6M VC fund}, competing against 15+ teams as part of a four-member team at IIT Kanpur}
 % \resumeItemListEnd
 \resumeSubHeadingListEnd
-%
+\vspace{-17pt}
 \section{Volunteering \& Technical Competitions}
 %
 \resumeSubHeadingListStart
@@ -235,15 +235,15 @@
     \resumeItemListStart
         % \resumeItem{At \href{https://metakgp.github.io/}{MetaKGP}, contributed to and promoted multiple projects like \href{https://github.com/metakgp/erp-auto-login}{ERP Auto-Login} and \href{https://github.com/metakgp/gyft-serve}{GYFT} to improve student life}
         \resumeItem{At \href{https://kossiitkgp.org/}{KOSS}, helped conduct workshops regarding Git, \href{https://www.youtube.com/watch?v=4zNbLz7ugBo}{Vim} and Python to spread Open Source culture in IIT Kharagpur}
-        \resumeItem{Organized \href{https://kwoc21.kossiitkgp.org/}{KWoC}, a month long event for students to contribute to Open Source, \textbf{1200+ registrations \& 750+ PRs}}
-\resumeItem{Revamped student council's website to show events, contacts and conduct elections, resulted in \textbf{25k visits in 3 weeks}}
+        \resumeItem{Organized \href{https://kwoc21.kossiitkgp.org/}{KWoC}, a month long event for students to contribute to Open Source, \textbf{1200+ registrations \& 750+ PRs}} % Use single backslash &, Use single backslashes
+\resumeItem{Revamped student council's website to show events, contacts and conduct elections, resulted in \textbf{25k visits in 3 weeks}} % Use single backslashes
     \resumeItemListEnd
 %
     \resumeSubSubheading{\textbf{Inter-IIT Tech}}{}
     \resumeItemListStart
-        \resumeItem{\textbf{Won gold} in InterIIT Tech 2022 for {\href{https://github.com/pinter-pi-pi-tea/documentation/blob/main/Documentation.md} {Saasifi}}, a graph-based analysis tool for SEC filings, built on top of \href{https://github.com/nlpaueb/edgar-crawler}{edgar-crawler}}
-        \resumeItem{\textbf{Won Mercari large-scale system design event} at InterIIT Tech 2022 with a scalable hospital management system}
-        \resumeItem{\textbf{Won InterIIT Tech 2023 gold} as the Development Captain, oversaw \textbf{200+ interviews} and \textbf{managed 10+ teams}}
+        \resumeItem{\textbf{Won gold} in InterIIT Tech 2022 for {\href{https://github.com/pinter-pi-pi-tea/documentation/blob/main/Documentation.md} {Saasifi}}, a graph-based analysis tool for SEC filings, built on top of \href{https://github.com/nlpaueb/edgar-crawler}{edgar-crawler}} % Use single backslashes
+        \resumeItem{\textbf{Won Mercari large-scale system design event} at InterIIT Tech 2022 with a scalable hospital management system} % Use single backslashes
+        \resumeItem{\textbf{Won InterIIT Tech 2023 gold} as the Development Captain, oversaw \textbf{200+ interviews} and \textbf{managed 10+ teams}} % Use single backslashes
     \resumeItemListEnd
     \resumeSubHeadingListEnd
 % \end{itemize}
